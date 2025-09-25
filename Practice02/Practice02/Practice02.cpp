@@ -1,6 +1,6 @@
 /*************************************************************
  * 1. Name:
- *      -your name-
+ *      -Hayden Olson-
  * 2. Assignment Name:
  *      Practice 02: Physics simulator
  * 3. Assignment Description:
