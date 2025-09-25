@@ -31,7 +31,11 @@ using namespace std;
  * OUTPUT
  *     s : new position, in meters
  **************************************************/
- // your function goes here
+float distanceFormula(float s, float v, float a, float t)
+{
+	float s2 = s + v * t + 0.5 * a * t * t;
+    return s2;
+}
 
  /**************************************************
   * COMPUTE ACCELERATION
