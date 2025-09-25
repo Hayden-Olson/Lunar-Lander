@@ -68,7 +68,11 @@ float accelerationFormula(float f, float m)
    * OUTPUT
    *     v : new velocity, in meters/second
    ***********************************************/
-   // your function goes here
+float velocityFormula(float v, float a, float t)
+{
+    float v2 = v + a * t;
+	return v2;
+}
 
 
    /***********************************************
