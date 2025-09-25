@@ -33,9 +33,9 @@ using namespace std;
  **************************************************/
 float distanceFormula(float s, float v, float a, float t)
 {
-	float s2 = s + v * t + 0.5 * a * t * t;
+    float s2 = s + v * t + 0.5 * a * t * t;
     return s2;
-}
+};
 
  /**************************************************
   * COMPUTE ACCELERATION
@@ -52,7 +52,7 @@ float accelerationFormula(float f, float m)
 {
     float a = f / m;
     return a;
-}
+};
 
   /***********************************************
    * COMPUTE VELOCITY
@@ -71,8 +71,8 @@ float accelerationFormula(float f, float m)
 float velocityFormula(float v, float a, float t)
 {
     float v2 = v + a * t;
-	return v2;
-}
+    return v2;
+};
 
 
    /***********************************************
@@ -95,9 +95,9 @@ float velocityFormula(float v, float a, float t)
     ***********************************************/
 float verticalComponentFormula(float a, float total)
 {
-	float y = cos(a) * total;
+    float y = cos(a) * total;
     return y;
-}
+};
 
     /***********************************************
      * COMPUTE HORIZONTAL COMPONENT
@@ -117,7 +117,12 @@ float verticalComponentFormula(float a, float total)
      * OUTPUT
      *     x : the vertical component of the total
      ***********************************************/
-     // your function goes here
+float computeHorizComp(float a, float total)
+{
+    float x;
+    x = sin(a) * total;
+    return x;
+};
 
      /************************************************
       * COMPUTE TOTAL COMPONENT
@@ -160,7 +165,14 @@ float verticalComponentFormula(float a, float total)
         * OUTPUT
         *      response : the user's response
         ***************************************************/
-        // your function goes here
+double prompt(string q) 
+{
+    cout << q;
+    float userInput;
+    cin >> userInput;
+
+    return userInput;
+};
 
         /****************************************************************
          * MAIN
