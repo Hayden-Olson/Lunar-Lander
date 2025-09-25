@@ -1,6 +1,6 @@
 /*************************************************************
  * 1. Name:
- *      -Hayden Olson-
+ *      -Hayden Olson & Mason Allen-
  * 2. Assignment Name:
  *      Practice 02: Physics simulator
  * 3. Assignment Description:
