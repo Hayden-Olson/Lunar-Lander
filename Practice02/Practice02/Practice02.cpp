@@ -93,7 +93,11 @@ float velocityFormula(float v, float a, float t)
     * OUTPUT
     *     y : the vertical component of the total
     ***********************************************/
-    // your function goes here
+float verticalComponentFormula(float a, float total)
+{
+	float y = cos(a) * total;
+    return y;
+}
 
     /***********************************************
      * COMPUTE HORIZONTAL COMPONENT
