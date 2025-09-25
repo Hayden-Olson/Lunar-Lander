@@ -48,7 +48,11 @@ float distanceFormula(float s, float v, float a, float t)
   * OUTPUT
   *     a : acceleration, in meters/second^2
   ***************************************************/
-  // your function goes here
+float accelerationFormula(float f, float m)
+{
+    float a = f / m;
+    return a;
+}
 
   /***********************************************
    * COMPUTE VELOCITY
