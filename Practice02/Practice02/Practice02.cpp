@@ -143,7 +143,11 @@ float computeHorizComp(float a, float total)
       * OUTPUT
       *    total : total component
       ***********************************************/
-      // your function goes here
+float computeTotalComponent(float x, float y)
+{
+    float total = sqrt(x * x + y * y);
+    return total;
+};
 
 
       /*************************************************
