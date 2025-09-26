@@ -159,7 +159,11 @@ float computeTotalComponent(float x, float y)
        * OUTPUT
        *     r : radians from 0 to 2pi
        **************************************************/
-       // your function goes here
+float radiansFromDegrees(float d)
+{
+    float r = d * (3.14159 / 180);
+    return r;
+};
 
        /**************************************************
         * PROMPT
