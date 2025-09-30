@@ -1,0 +1,27 @@
+﻿  Practice02.cpp
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(36,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(164,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(208,35): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(210,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(210,34): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(211,52): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(211,42): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(214,35): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(214,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(219,38): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(219,34): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(219,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(219,29): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(221,41): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(221,36): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(221,32): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(221,29): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(223,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(223,34): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(223,30): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(225,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(225,34): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(225,30): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(227,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\Practice02\Practice02\Practice02.cpp(227,35): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Practice02.vcxproj -> C:\Users\mason\Source\Repos\Lunar-Lander-local\Practice02\x64\Debug\Practice02.exe

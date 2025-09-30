@@ -203,17 +203,36 @@ int main()
     double ddy;                 // Total vertical acceleration
     double v;                   // Total velocity
 
+
+    //get undefined variables
+    aRadians = radiansFromDegrees(aDegrees);
+    accelerationThrust = accelerationFormula(THRUST, WEIGHT);
+    ddxThrust = computeHorizComp(aRadians, accelerationThrust);
+    ddyThrust = verticalComponentFormula(aRadians, accelerationThrust);
+    ddx = ddxThrust;
+    ddy = ddyThrust + GRAVITY;
+    v = computeTotalComponent(dx, dy);
+
     // Go through the simulator five times
-      // your code goes here
-      // Hint: Update the position _before_ updating the velocity
+    for (int i = 0; i < 5; i++) {
+        //x distance
+        x = distanceFormula(x,dx,ddx,t);
+        //y formula
+        y = distanceFormula(y, dy, ddy, t);
+        //x velocity 
+        dx = velocityFormula(dx, ddx, t);
+        //y velocity
+        dy = velocityFormula(dy, ddy, t);
+        //total velocity
+        v = computeTotalComponent(dx, dy);
 
-      // Output
-    cout.setf(ios::fixed | ios::showpoint);
-    cout.precision(2);
-    cout << "\tNew position:   (" << x << ", " << y << ")m\n";
-    cout << "\tNew velocity:   (" << dx << ", " << dy << ")m/s\n";
-    cout << "\tTotal velocity:  " << v << "m/s\n\n";
+        // Output
+        cout.setf(ios::fixed | ios::showpoint);
+        cout.precision(2);
+        cout << "\tNew position:   (" << x << ", " << y << ")m\n";
+        cout << "\tNew velocity:   (" << dx << ", " << dy << ")m/s\n";
+        cout << "\tTotal velocity:  " << v << "m/s\n\n";
 
-
+    }
     return 0;
 }
