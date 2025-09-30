@@ -2,9 +2,9 @@
  * 1. Name:
  *      -Hayden Olson & Mason Allen-
  * 2. Assignment Name:
- *      Lab 02: Apollo 11 Physics
+ *      Lab 02: Apollo 11
  * 3. Assignment Description:
- *      Compute how the Apollo lander will move across the screen
+ *      Simulate the Apollo 11 landing
  * 4. What was the hardest part? Be as specific as possible.
  *      -It took a while to get Git working. The solution was to fix the gitignore.
  *       I opened the gitignore in visual studio and added an ignore for visual studio files.
