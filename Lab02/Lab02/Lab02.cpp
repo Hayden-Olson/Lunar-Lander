@@ -6,11 +6,11 @@
  * 3. Assignment Description:
  *      Simulate the Apollo 11 landing
  * 4. What was the hardest part? Be as specific as possible.
- *      -It took a while to get Git working. The solution was to fix the gitignore.
- *       I opened the gitignore in visual studio and added an ignore for visual studio files.
- *       The final loop was tricky to figure out. Making sure we had the right values ended up being the hardest part.-
+ *      Since we were using the practice 02 assignment as a template, we had to
+ *      reorganize some of the prompts and replace some of them with set values, which took a few
+ *      attempts to get set correctly
  * 5. How long did it take for you to complete the assignment?
- *      -3 hours
+ *      ~ 2 hours
  **************************************************************/
 
 #include <iostream>  // for CIN and COUT
@@ -191,12 +191,12 @@ double prompt(string q)
 int main()
 {
     // Prompt for input and variables to be computed
-    double dx = prompt("What is your horizontal velocity (m/s)? ");
     double dy = prompt("What is your vertical velocity (m/s)? ");
+    double dx = prompt("What is your horizontal velocity (m/s)? ");
     double y = prompt("What is your altitude (m)? ");
-    double x = prompt("What is your position (m)? ");
+    double x = 0;
     double aDegrees = prompt("What is the angle of the LM where 0 is up (degrees)? ");
-    double t = prompt("What is the time interval (s)? ");
+    double t = 1;
     double aRadians;            // Angle in radians
     double accelerationThrust;  // Acceleration due to thrust 
     double ddxThrust;           // Horizontal acceleration due to thrust
@@ -216,7 +216,7 @@ int main()
     v = computeTotalComponent(dx, dy);
     
     while (y > 0) {
-
+        int timeCount = 0;
 
         // Go through the simulator five times
         for (int i = 0; i < 5; i++) {
@@ -234,12 +234,11 @@ int main()
             // Output
             cout.setf(ios::fixed | ios::showpoint);
             cout.precision(2);
-            cout << "\tNew position:   (" << x << ", " << y << ")m\n";
-            cout << "\tNew velocity:   (" << dx << ", " << dy << ")m/s\n";
-            cout << "\tTotal velocity:  " << v << "m/s\n\n";
-
+            cout << ++timeCount << " s - x,y: (" << x << ", " << y 
+                << ")m dx, dy: (" << dx << ", " << dy << ") m/s  speed:" << v << "m/s  angle:" << aDegrees << "deg\n";
         }
 
+        
         if (y > 0) {
             //prompt user for new angle
             aDegrees = prompt("What is the new angle of the LM where 0 is up?: ");
