@@ -214,27 +214,43 @@ int main()
     ddx = ddxThrust;
     ddy = ddyThrust + GRAVITY;
     v = computeTotalComponent(dx, dy);
+    
+    while (y > 0) {
 
-    // Go through the simulator five times
-    for (int i = 0; i < 5; i++) {
-        //x distance
-        x = distanceFormula(x, dx, ddx, t);
-        //y formula
-        y = distanceFormula(y, dy, ddy, t);
-        //x velocity 
-        dx = velocityFormula(dx, ddx, t);
-        //y velocity
-        dy = velocityFormula(dy, ddy, t);
-        //total velocity
-        v = computeTotalComponent(dx, dy);
 
-        // Output
-        cout.setf(ios::fixed | ios::showpoint);
-        cout.precision(2);
-        cout << "\tNew position:   (" << x << ", " << y << ")m\n";
-        cout << "\tNew velocity:   (" << dx << ", " << dy << ")m/s\n";
-        cout << "\tTotal velocity:  " << v << "m/s\n\n";
+        // Go through the simulator five times
+        for (int i = 0; i < 5; i++) {
+            //x distance
+            x = distanceFormula(x, dx, ddx, t);
+            //y formula
+            y = distanceFormula(y, dy, ddy, t);
+            //x velocity 
+            dx = velocityFormula(dx, ddx, t);
+            //y velocity
+            dy = velocityFormula(dy, ddy, t);
+            //total velocity
+            v = computeTotalComponent(dx, dy);
 
+            // Output
+            cout.setf(ios::fixed | ios::showpoint);
+            cout.precision(2);
+            cout << "\tNew position:   (" << x << ", " << y << ")m\n";
+            cout << "\tNew velocity:   (" << dx << ", " << dy << ")m/s\n";
+            cout << "\tTotal velocity:  " << v << "m/s\n\n";
+
+        }
+
+        if (y > 0) {
+            //prompt user for new angle
+            aDegrees = prompt("What is the new angle of the LM where 0 is up?: ");
+
+            //recalculate angle related variables
+            aRadians = radiansFromDegrees(aDegrees);
+            ddxThrust = computeHorizComp(aRadians, accelerationThrust);
+            ddyThrust = verticalComponentFormula(aRadians, accelerationThrust);
+            ddx = ddxThrust;
+            ddy = ddyThrust + GRAVITY;
+        }
     }
     return 0;
 }
