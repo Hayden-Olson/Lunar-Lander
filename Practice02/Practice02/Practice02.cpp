@@ -6,9 +6,11 @@
  * 3. Assignment Description:
  *      Compute how the Apollo lander will move across the screen
  * 4. What was the hardest part? Be as specific as possible.
- *      -a paragraph or two about how the assignment went for you-
+ *      -It took a while to get Git working. The solution was to fix the gitignore. 
+ *       I opened the gitignore in visual studio and added an ignore for visual studio files.
+ *       The final loop was tricky to figure out. Making sure we had the right values ended up being the hardest part.-
  * 5. How long did it take for you to complete the assignment?
- *      -total time in hours: reading the assignment, submitting, etc.
+ *      -3 hours
  **************************************************************/
 
 #include <iostream>  // for CIN and COUT
