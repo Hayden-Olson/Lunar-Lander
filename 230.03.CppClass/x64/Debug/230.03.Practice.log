@@ -1,5 +1,4 @@
 ﻿  angle.cpp
-C:\Users\mason\source\repos\Lunar-Lander-local\230.03.CppClass\angle.h(62,9): warning C4551: function call missing argument list
 C:\Users\mason\source\repos\Lunar-Lander-local\230.03.CppClass\testAngle.h(484,20): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\mason\source\repos\Lunar-Lander-local\230.03.CppClass\testAngle.h(495,20): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\mason\source\repos\Lunar-Lander-local\230.03.CppClass\testAngle.h(506,20): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data

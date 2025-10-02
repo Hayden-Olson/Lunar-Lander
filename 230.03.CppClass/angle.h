@@ -63,7 +63,8 @@ class Angle
 			//not sure why floor() isn't working, even with math.h imported. cout.precision isn't working either.
 			// there's currently a tiny innacuracy with the display, such as 90 being '89.999999999...'. might be related? not sure.
 			//at the very least I don't see anywhere else in the program that would result in that kind of discrepancy.
-			out << convertToDegrees(radians) << "degrees";
+			double outRads = convertToDegrees(radians);
+			out << outRads << "degrees";
 		};
 
 	private:
