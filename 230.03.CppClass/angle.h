@@ -1,6 +1,6 @@
 /*************************************************************
  * 1. Name:
- *      -your name-
+ *      Mason Allen & Hayden Olson
  * 2. Assignment Name:
  *      Practice 03: Angle Class
  * 3. Assignment Description:
@@ -29,6 +29,50 @@ class Angle
 {
    friend TestAngle;
 
+	public:
+
+		double getDegrees() 
+		{
+
+		};
+
+		double getRadians() 
+		{
+
+		};
+
+		int setDegrees(int degrees)
+		{
+
+		};
+
+		double getRadians(double radian)
+		{
+
+		};
+
+		void display(ostream& out, double degrees)
+		{
+			cout.precision(1);
+			out << degrees;
+		};
+
+	private:
+
+		double normalize(double radian)
+		{
+
+		};
+
+		double convertToDegrees(double radian)
+		{
+
+		};
+
+		double convertToRadians(double degrees)
+		{
+
+		};
 };
 
 
