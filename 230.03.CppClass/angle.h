@@ -6,7 +6,7 @@
  * 3. Assignment Description:
  *      A class to represent an angle
  * 4. What was the hardest part? Be as specific as possible.
- *      Generally alright, it took a few rereads of the requiredments to get everything
+ *      Generally alright, it took a few rereads of the requirements to get everything
  *		set up correctly. Ultimately, i was unable to get the decimal precision of display() working,
  *		and I'm still not sure why floor() isn't functioning, or why cout.precision is having no affect.
  * 5. How long did it take for you to complete the assignment?
