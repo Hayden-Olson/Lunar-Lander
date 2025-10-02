@@ -20,6 +20,7 @@
 #include <math.h>    // for floor()
 #include <iostream>  // for cout
 #include <cassert>   // for assert()
+#include <iomanip>   // for setprecision() 
 using namespace std;
 class TestAngle;
 
@@ -60,11 +61,8 @@ class Angle
 
 		void display(ostream& out)
 		{
-			//not sure why floor() isn't working, even with math.h imported. cout.precision isn't working either.
-			// there's currently a tiny innacuracy with the display, such as 90 being '89.999999999...'. might be related? not sure.
-			//at the very least I don't see anywhere else in the program that would result in that kind of discrepancy.
 			double outRads = convertToDegrees(radians);
-			out << outRads << "degrees";
+			std::cout << std::fixed << std::setprecision(1) << outRads << "degrees" << std::endl;
 		};
 
 	private:
