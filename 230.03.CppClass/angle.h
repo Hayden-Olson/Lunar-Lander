@@ -6,9 +6,11 @@
  * 3. Assignment Description:
  *      A class to represent an angle
  * 4. What was the hardest part? Be as specific as possible.
- *      -a paragraph or two about how the assignment went for you-
+ *      Generally alright, it took a few rereads of the requiredments to get everything
+ *		set up correctly. Ultimately, i was unable to get the decimal precision of display() working,
+ *		and I'm still not sure why floor() isn't functioning, or why cout.precision is having no affect.
  * 5. How long did it take for you to complete the assignment?
- *      -total time in hours: reading the assignment, submitting, etc.
+ *      Just over 2 hours
  **************************************************************/
 
 #pragma once
@@ -58,7 +60,9 @@ class Angle
 
 		void display(ostream& out)
 		{
-			//not sure why floor() doesnt work here. cout.precision isn't working either.
+			//not sure why floor() isn't working, even with math.h imported. cout.precision isn't working either.
+			// there's currently a tiny innacuracy with the display, such as 90 being '89.999999999...'. might be related? not sure.
+			//at the very least I don't see anywhere else in the program that would result in that kind of discrepancy.
 			out << convertToDegrees(radians) << "degrees";
 		};
 
