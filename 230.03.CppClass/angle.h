@@ -19,7 +19,6 @@
 #include <iostream>  // for cout
 #include <cassert>   // for assert()
 using namespace std;
-
 class TestAngle;
 
  /************************************
@@ -28,50 +27,72 @@ class TestAngle;
 class Angle
 {
    friend TestAngle;
+   double radians;
+   
 
 	public:
 
 		double getDegrees() 
 		{
-
+			double degAngle = convertToDegrees(radians);
+			return degAngle;
 		};
 
 		double getRadians() 
 		{
-
+			return radians;
 		};
 
-		int setDegrees(int degrees)
+		void setDegrees(int degrees)
 		{
-
+			double newRads = convertToRadians(degrees);
+			radians = newRads;
 		};
 
-		double getRadians(double radian)
+		void setRadians(double rawRadian)
 		{
-
+			rawRadian = normalize(rawRadian);
+			radians = rawRadian;
+			
 		};
 
-		void display(ostream& out, double degrees)
+		void display(ostream& out)
 		{
-			cout.precision(1);
-			out << degrees;
+			//not sure why floor() doesnt work here. cout.precision isn't working either.
+			out << convertToDegrees(radians) << "degrees";
 		};
 
 	private:
 
-		double normalize(double radian)
+		double normalize(double inRadian)
 		{
+			while ((inRadian > TWO_PI) or (inRadian < 0))
+			{
+				while (inRadian > TWO_PI)
+				{
+					inRadian = inRadian - TWO_PI;
+				};
 
+				while (inRadian < 0)
+				{
+					inRadian = inRadian + TWO_PI;
+				};
+			};
+			return inRadian;
 		};
 
-		double convertToDegrees(double radian)
+		double convertToDegrees(double inRadian)
 		{
-
+			inRadian = normalize(inRadian);
+			double newDeg = (inRadian * (180 / (TWO_PI / 2)));
+			return newDeg;
 		};
 
 		double convertToRadians(double degrees)
 		{
-
+			double newRad = (degrees * ((TWO_PI / 2) / 180));
+			newRad = normalize(newRad);
+			return newRad;
 		};
 };
 
