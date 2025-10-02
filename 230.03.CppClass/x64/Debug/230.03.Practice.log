@@ -1,0 +1,7 @@
+﻿  angle.cpp
+C:\Users\mason\source\repos\Lunar-Lander-local\230.03.CppClass\testAngle.h(484,20): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\230.03.CppClass\testAngle.h(495,20): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\230.03.CppClass\testAngle.h(506,20): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\230.03.CppClass\testAngle.h(517,26): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\mason\source\repos\Lunar-Lander-local\230.03.CppClass\testAngle.h(528,27): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  230.03.Practice.vcxproj -> C:\Users\mason\source\repos\Lunar-Lander-local\230.03.CppClass\x64\Debug\230.03.Practice.exe
