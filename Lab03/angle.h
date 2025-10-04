@@ -82,5 +82,15 @@ private:
    double normalize(double radians) const;
 
    double radians;   // 360 degrees equals 2 PI radians
+
+   double convertToDegrees(double radians)
+	{
+	   return radians / (M_PI * 2) * 360;
+    };
+
+	double convertToRadians(double degrees)
+   {
+	   return degrees / 360 * (M_PI * 2);
+   };
 };
 
