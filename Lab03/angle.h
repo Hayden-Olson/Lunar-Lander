@@ -30,8 +30,7 @@ public:
    friend TestLander;
    
    // Constructors
-   Angle() : radians(0.0)
-   {};
+   Angle() : radians(0.0) {};
    Angle(const Angle& rhs) : radians(rhs.radians)
    {};
    Angle(double degrees)
@@ -50,11 +49,8 @@ public:
    };
 
    // Setters
-   void setDegrees(double degrees)
-   {
-	   double newRadian = degrees * M_PI / 180.0;
-	   radians = normalize(newRadian);
-   };
+   void setDegrees(double degrees);
+   
    void setRadians(double inRadians)
    {
 	   radians = normalize(inRadians);
@@ -86,18 +82,8 @@ public:
    };
 
 private:
-	double normalize(double angle) const
-	{
-		while (angle < 0)
-		{
-			angle += 2.0 * M_PI;
-		}
-		while (angle >= 2.0 * M_PI) 
-		{
-			angle -= 2.0 * M_PI;
-		}
-		return angle;
-	};
+	double normalize(double angle) const;
+	
 
 	double radians;   // 360 degrees equals 2 PI radians
 };
