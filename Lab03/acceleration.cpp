@@ -28,6 +28,6 @@ void Acceleration::add(const Acceleration& acceleration)
  *********************************************/
 void Acceleration::set(const Angle & angle, double magnitude)
 {
-   ddx = magnitude * cos(angle.getDegrees());
-   ddy = magnitude * sin(angle.getDegrees());
+   ddy = magnitude * cos(angle.getRadians());
+   ddx = magnitude * sin(angle.getRadians());
 }
