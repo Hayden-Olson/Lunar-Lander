@@ -1,5 +1,4 @@
 ﻿  acceleration.cpp
-  angle.cpp
-  test.cpp
-  Generating Code...
+C:\Users\mason\source\repos\Lunar-Lander-local\Lab03\acceleration.h(12,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\mason\source\repos\Lunar-Lander-local\Lab03\acceleration.h(13,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   Lab03.vcxproj -> C:\Users\mason\source\repos\Lunar-Lander-local\Lab03\x64\Debug\Lab03.exe

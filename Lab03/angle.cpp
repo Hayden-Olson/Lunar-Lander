@@ -13,5 +13,20 @@
 using namespace std;
 
 
+/************************************
+ * ANGLE : NORMALIZE
+ ************************************/
+double Angle::normalize(double radians) const
+{
+	while (radians < 0)
+	{
+		radians += 2.0 * M_PI;
+	}
+	while (radians >= 2.0 * M_PI)
+	{
+		radians -= 2.0 * M_PI;
+	}
+	return radians;
+}
 
 

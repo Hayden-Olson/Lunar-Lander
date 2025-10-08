@@ -86,18 +86,7 @@ public:
    };
 
 private:
-	double normalize(double angle) const
-	{
-		while (angle < 0)
-		{
-			angle += 2.0 * M_PI;
-		}
-		while (angle >= 2.0 * M_PI) 
-		{
-			angle -= 2.0 * M_PI;
-		}
-		return angle;
-	};
+	double normalize(double angle) const;
 
    double radians;   // 360 degrees equals 2 PI radians
 
