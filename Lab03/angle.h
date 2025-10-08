@@ -10,49 +10,84 @@
  * 5. How long did it take for you to complete the assignment?
  *      -total time in hours: reading the assignment, submitting, etc.
  **************************************************************/
+#pragma once
 
+#define _USE_MATH_DEFINES
+#include <math.h>   // for M_PI which is 3.14159
 
-#define TWO_PI 6.28318530718
-
-#include <math.h>    // for floor()
-#include <iostream>  // for cout
-#include <cassert>   // for assert()
-using namespace std;
-
+class TestPosition;
+class TestVelocity;
+class TestAcceleration;
 class TestAngle;
+class TestLander;
 
- /************************************
-  * ANGLE
-  ************************************/
+/************************************
+ * ANGLE
+ ************************************/
 class Angle
 {
-   friend TestAngle;
-
 public:
-   // Default constructor
-   Angle()                   { }
-   Angle(const Angle & rhs)  { }
-   Angle(double degrees)     { }
+	friend TestAcceleration;
+	friend TestVelocity;
+	friend TestAngle;
+	friend TestLander;
 
-   // Getters
-   double getDegrees() const { return -1.0; }
-   double getRadians() const { return -1.0; }
+	// Constructors
+	Angle() : radians(0.0) {};
+	Angle(const Angle& rhs) : radians(rhs.radians)
+	{
+	};
+	Angle(double degrees)
+	{
+		setDegrees(degrees);
+	};
 
-   // Setters
-   void setDegrees(double degrees) { }
-   void setRadians(double radians) { }
+	// Getters
+	double getDegrees() const
+	{
+		return radians * 180.0 / M_PI;
+	};
+	double getRadians() const
+	{
+		return radians;
+	};
 
-   // Display
-   void display(ostream & out) const { }
+	// Setters
+	void setDegrees(double degrees);
+
+	void setRadians(double inRadians)
+	{
+		radians = normalize(inRadians);
+	};
+	void setUp()
+	{
+		setDegrees(0);
+	};
+	void setDown()
+	{
+		setDegrees(180);
+	};
+	void setRight()
+	{
+		setDegrees(90);
+	};
+	void setLeft()
+	{
+		setDegrees(270);
+	};
+	void reverse()
+	{
+		radians = normalize(radians + M_PI);
+	};
+	Angle& add(double delta)
+	{
+		radians = normalize(radians + delta);
+		return *this;
+	};
 
 private:
-   // Convert functions
-   double convertToDegrees(double radians) const { return -1.0; }
-   double convertToRadians(double degrees) const { return -1.0; }
+	double normalize(double angle) const;
 
-   // Normalize
-   double normalize(double radians) const { return  -1.0; }
 
-   double radians;
+	double radians;   // 360 degrees equals 2 PI radians
 };
-
