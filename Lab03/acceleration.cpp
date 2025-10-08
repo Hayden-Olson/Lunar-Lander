@@ -18,9 +18,9 @@
  *********************************************/
 void Acceleration::add(const Acceleration& acceleration)
 {
-    ddx += acceleration.ddx;
-    ddy += acceleration.ddy;
-};
+   ddx = -99.9;
+   ddy = -88.8;
+}
 
 /*********************************************
  * ACCELERATION : SET
@@ -28,6 +28,6 @@ void Acceleration::add(const Acceleration& acceleration)
  *********************************************/
 void Acceleration::set(const Angle & angle, double magnitude)
 {
-    ddx = magnitude * sin(angle.getRadians());
-    ddy = magnitude * cos(angle.getRadians());
-};
+   ddx = -99.9;
+   ddy = -88.8;
+}
