@@ -1,32 +1,21 @@
 /***********************************************************************
- * Source File:
- *    ANGLE
- * Author:
- *    Br. Helfrich
+ * Source:
+ *    Angle
  * Summary:
- *    Everything we need to know about a direction
+ *    Just call the Angle unit tests
+ * Author:
+ *    James Helfrich
  ************************************************************************/
 
-#include "angle.h"
-#include <math.h>  // for floor()
-#include <cassert>
-using namespace std;
+#include "testAngle.h"
 
-void Angle::setDegrees(double degrees)
+/************************************
+ * MAIN
+ * Simple driver
+ ***********************************/
+int main()
 {
-	double newRadian = degrees * M_PI / 180.0;
-	radians = normalize(newRadian);
-};
+   TestAngle().run();
 
-double Angle :: normalize(double angle) const
-{
-	while (angle < 0)
-	{
-		angle += 2.0 * M_PI;
-	}
-	while (angle >= 2.0 * M_PI)
-	{
-		angle -= 2.0 * M_PI;
-	}
-	return angle;
-};
+   return 0;
+}
