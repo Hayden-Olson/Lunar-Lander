@@ -14,6 +14,7 @@
 #include "angle.h"
 #define _USE_MATH_DEFINES
 #include <math.h>
+#include <assert.h>
 
 /*********************************************
  * TEST ACCELERATION
@@ -494,4 +495,12 @@ private:
       assertEquals(aRHS.ddy, 7.7);
    }  // teardown
 
+   bool assertEquals(double val1, double val2)
+   {
+       if (val1 == val2)
+       {
+           return true;
+       };
+       return false;
+   };
 };

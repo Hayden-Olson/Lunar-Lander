@@ -14,6 +14,8 @@
 
 #define _USE_MATH_DEFINES
 #include <math.h>   // for M_PI which is 3.14159
+#include <iostream>
+#include <iomanip>
 
 class TestPosition;
 class TestVelocity;
@@ -47,18 +49,35 @@ public:
 	{
 		return radians * 180.0 / M_PI;
 	};
+
+	double convertToDegrees(double inRads) const
+	{
+		double degrees = inRads * 180.0 / M_PI;
+		return degrees;
+	};
+
+	double convertToRadians(double inDegs) const
+	{
+		double retRads = inDegs * M_PI / 180;
+		return retRads;
+	};
+
 	double getRadians() const
 	{
 		return radians;
 	};
 
 	// Setters
-	void setDegrees(double degrees);
+	void setDegrees(double degrees)
+	{
+		radians = convertToRadians(degrees);
+	};
 
 	void setRadians(double inRadians)
 	{
 		radians = normalize(inRadians);
 	};
+
 	void setUp()
 	{
 		setDegrees(0);
@@ -85,8 +104,28 @@ public:
 		return *this;
 	};
 
+	void display(std::ostream& out) const
+	{
+		
+		out << std::fixed << std::setprecision(1) << convertToDegrees(radians) << "degrees\n";
+	};
+
 private:
-	double normalize(double angle) const;
+
+	double normalize(double angle) const
+	{
+		while (angle > (2 * M_PI))
+		{
+			angle = angle - (2 * M_PI);
+		};
+
+		while (angle < 0)
+		{
+			angle = angle + (2 * M_PI);
+		};
+
+		return angle;
+	};
 
 
 	double radians;   // 360 degrees equals 2 PI radians

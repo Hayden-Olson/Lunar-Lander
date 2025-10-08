@@ -13,9 +13,17 @@
  * MAIN
  * Simple driver
  ***********************************/
+
+/*
+
+commenting this out because there's two mains for some reason?
+
 int main()
 {
    TestAngle().run();
 
    return 0;
 }
+*/
+
+
