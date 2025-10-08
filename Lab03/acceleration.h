@@ -32,7 +32,7 @@ class Acceleration
 
 public:
    // constructors
-    Acceleration() : ddx(0), ddy(0) { };
+   Acceleration() : ddx(0), ddy(0) { };
    Acceleration(double ddx, double ddy) : ddx(ddx), ddy(ddy) { };
 
    // getters
