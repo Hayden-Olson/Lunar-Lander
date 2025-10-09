@@ -1,6 +1,6 @@
 /*************************************************************
  * 1. Name:
- *      -your name-
+ *      Mason Allen & Hayden Olson
  * 2. Assignment Name:
  *      Practice 04: Contaiers
  * 3. Assignment Description:
@@ -19,7 +19,13 @@ using namespace std;
 
 list<string> arrayToList(string a[], int num)
 {
-   return list<string>();
+	list<string> outList;
+
+	for (int i = 0; i < num; i++)
+	{
+		outList.push_back(a[i]);
+	}
+	return outList;
 }
 
 /*****************************
@@ -27,7 +33,13 @@ list<string> arrayToList(string a[], int num)
  *****************************/
 list<string> arrayToListBackwards(string a[], int num)
 {
-   return list<string>();
+	list<string> outList;
+
+	for (int i = num; i > 0; i--)
+	{
+		outList.push_back(a[i]);
+	}
+	return outList;
 }
 
 /*****************************
