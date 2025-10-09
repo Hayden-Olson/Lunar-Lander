@@ -35,7 +35,7 @@ list<string> arrayToListBackwards(string a[], int num)
 {
 	list<string> outList;
 
-	for (int i = num; i > 0; i--)
+	for (int i = num -1; i >= 0; i--)
 	{
 		outList.push_back(a[i]);
 	}
@@ -55,15 +55,20 @@ vector<string> listToVector(const list<string> & l)
  *****************************/
 vector<string> listToVectorBackwards(const list<string>& l)
 {
-   return vector<string>();
+	vector<string> vector = {};
+	for (auto rit = l.rbegin(); rit != l.rend(); rit++)
+	{
+		vector.push_back(*rit);
+	}
+   return vector;
 }
 
 /*****************************
  * FIND ELEMENT IN VECTOR
  *****************************/
-bool findElementInVector(const vector<string> & v, const string& element)
+bool findElementInVector(const vector<string>& v, const string& element)
 {
-	for (auto it=v.begin(); it!=v.end(); it++)
+	for (auto it = v.begin(); it != v.end(); it++)
 	{
 		if (*it == element)
 			return true;
