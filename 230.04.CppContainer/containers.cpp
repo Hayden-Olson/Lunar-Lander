@@ -20,7 +20,8 @@ using namespace std;
 list<string> arrayToList(string a[], int num)
 {
 	list<string> outList;
-
+	
+	//just a simple for loop using push.back()
 	for (int i = 0; i < num; i++)
 	{
 		outList.push_back(a[i]);
@@ -35,6 +36,7 @@ list<string> arrayToListBackwards(string a[], int num)
 {
 	list<string> outList;
 
+	//just reversing the start and end points, and makign it deincrement. might need to make small adjustments after testing.
 	for (int i = num; i > 0; i--)
 	{
 		outList.push_back(a[i]);
@@ -47,7 +49,8 @@ list<string> arrayToListBackwards(string a[], int num)
  *****************************/
 vector<string> listToVector(const list<string> & l)
 {
-   return vector<string>();
+	//iterates through simply using a built-in vector constructor
+	return vector<string>(l.begin(), l.end());
 }
 
 /*****************************
