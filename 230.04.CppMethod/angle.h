@@ -57,6 +57,7 @@ public:
 
 	double convertToDegrees(double inRads) const
 	{
+		inRads = normalize(inRads);
 		double degrees = inRads * 180.0 / M_PI;
 		return degrees;
 	};
@@ -64,6 +65,7 @@ public:
 	double convertToRadians(double inDegs) const
 	{
 		double retRads = inDegs * M_PI / 180;
+		retRads = normalize(retRads);
 		return retRads;
 	};
 
@@ -112,7 +114,7 @@ public:
 	void display(std::ostream& out) const
 	{
 
-		out << std::fixed << std::setprecision(1) << convertToDegrees(radians) << "degrees\n";
+		out << std::fixed << std::setprecision(1) << convertToDegrees(radians) << "degrees";
 	};
 
 private:
