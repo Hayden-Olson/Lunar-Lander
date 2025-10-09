@@ -51,7 +51,13 @@ vector<string> listToVectorBackwards(const list<string>& l)
  *****************************/
 bool findElementInVector(const vector<string> & v, const string& element)
 {
-   return false;
+	for (auto it=v.begin(); it!=v.end(); it++)
+	{
+		if (*it == element)
+			return true;
+		else
+			return false;
+	}
 }
 
 /*****************************
