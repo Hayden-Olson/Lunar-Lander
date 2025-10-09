@@ -1,14 +1,15 @@
 /*************************************************************
  * 1. Name:
- *      -your name-
+ *      -Hayden Olson & Mason Allen-
  * 2. Assignment Name:
  *      Practice 04: Angle Class
  * 3. Assignment Description:
  *      A class to represent an angle
  * 4. What was the hardest part? Be as specific as possible.
- *      -a paragraph or two about how the assignment went for you-
+ *      -Getting the files properly working. Nothing would work for a while. Something went wrong when getting the new files for this assignment.
+ *		 The tests were failing still.-
  * 5. How long did it take for you to complete the assignment?
- *      -total time in hours: reading the assignment, submitting, etc.
+ *      -5 hours.-
  **************************************************************/
 #pragma once
 
