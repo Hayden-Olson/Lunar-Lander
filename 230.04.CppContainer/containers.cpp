@@ -37,7 +37,7 @@ list<string> arrayToListBackwards(string a[], int num)
 	list<string> outList;
 
 	//just reversing the start and end points, and makign it deincrement. might need to make small adjustments after testing.
-	for (int i = num; i > 0; i--)
+	for (int i = num -1; i >= 0; i--)
 	{
 		outList.push_back(a[i]);
 	}
@@ -75,9 +75,8 @@ bool findElementInVector(const vector<string>& v, const string& element)
 	{
 		if (*it == element)
 			return true;
-		else
-			return false;
 	}
+	return false;
 }
 
 /*****************************
