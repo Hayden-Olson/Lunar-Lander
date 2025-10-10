@@ -6,9 +6,9 @@
  * 3. Assignment Description:
  *      Work with a list and a vector
  * 4. What was the hardest part? Be as specific as possible.
- *      -a paragraph or two about how the assignment went for you-
+ *      -figuring out proper syntax fpr adding, iterating, and creating lists.-
  * 5. How long did it take for you to complete the assignment?
- *      -total time in hours: reading the assignment, submitting, etc.
+ *      -3 hours
  **************************************************************/
 
 
