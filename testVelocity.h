@@ -81,7 +81,7 @@ private:
     * input:   2.3, 4.5
     * output:  (2.3, 4.5)
     *********************************************/
-   void constructor_nonDefault()
+   void constructor_nonDefault(double dx,double dy)
    {  // setup
       double dx = 2.3;
       double dy = 4.5;
