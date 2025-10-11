@@ -29,7 +29,8 @@ void Velocity::add(const Acceleration& acceleration, double time)
  *********************************************/
 double Velocity::getSpeed() const
 {
-   return -11.1;
+	auto speed = sqrt((dx * dx) + (dy * dy));
+	return speed;
 }
 
 /*********************************************

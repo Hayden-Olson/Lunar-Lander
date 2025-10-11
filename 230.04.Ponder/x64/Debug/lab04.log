@@ -1,11 +1,5 @@
-﻿  acceleration.cpp
-  angle.cpp
-  ground.cpp
-  position.cpp
-  simulator.cpp
+﻿  position.cpp
   test.cpp
-  uiDraw.cpp
-  uiInteract.cpp
   velocity.cpp
   Generating Code...
   lab04.vcxproj -> C:\Users\mason\source\repos\Lunar-Lander-local\230.04.Ponder\x64\Debug\Lab04.exe
