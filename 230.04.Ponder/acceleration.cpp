@@ -1,6 +1,6 @@
 /***********************************************************************
  * Source File:
- *    ACCELERATION 
+ *    ACCELERATION
  * Author:
  *    Br. Helfrich
  * Summary:
@@ -12,22 +12,22 @@
 
 #include <cmath>
 
-/*********************************************
- * ACCELERATION : ADD
- *  a += a
- *********************************************/
+ /*********************************************
+  * ACCELERATION : ADD
+  *  a += a
+  *********************************************/
 void Acceleration::add(const Acceleration& acceleration)
 {
-   ddx = -99.9;
-   ddy = -88.8;
+	ddx += acceleration.getDDX();
+	ddy += acceleration.getDDY();
 }
 
 /*********************************************
  * ACCELERATION : SET
  *  set from angle and direction
  *********************************************/
-void Acceleration::set(const Angle & angle, double magnitude)
+void Acceleration::set(const Angle& angle, double magnitude)
 {
-   ddx = -99.9;
-   ddy = -88.8;
+	ddy = magnitude * cos(angle.getRadians());
+	ddx = magnitude * sin(angle.getRadians());
 }

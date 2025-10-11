@@ -22,6 +22,8 @@ class Angle;
  /*********************************************
   * Velocity
   * I feel the need, the need for speed
+  * Ticket 1: about 35 minutes.
+  * 
   *********************************************/
 class Velocity
 {
@@ -46,8 +48,8 @@ public:
    void set(const Angle & angle, double magnitude);
 
    //these three are in Ticket 2
-   void addDX(double dx) { this->dx = 99.9; }
-   void addDY(double dy) { this->dy = 88.8; }
+   void addDX(double dx) { this->dx += dx; }
+   void addDY(double dy) { this->dy += dy; }
    void add(const Acceleration & acceleration, double time);
 
 private:
