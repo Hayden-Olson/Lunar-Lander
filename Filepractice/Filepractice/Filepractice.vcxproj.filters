@@ -20,6 +20,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Balance.txt" />
+    <Text Include="balance.txt" />
   </ItemGroup>
 </Project>
