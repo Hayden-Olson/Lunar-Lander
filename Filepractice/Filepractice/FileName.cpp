@@ -67,7 +67,13 @@ void updateBalance(double newBalance)
 int main()
 {
 	double balance = readBalance();
+	double newBalance;
 	displayBalance(balance);
+
+	cout << "Please enter new balance:";
+	
+	cin >> newBalance;
+	updateBalance(newBalance);
 
 	return 0;
 }
