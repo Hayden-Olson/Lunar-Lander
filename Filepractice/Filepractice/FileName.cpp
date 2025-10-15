@@ -67,8 +67,9 @@ void updateBalance(double newBalance)
 double userInput()
 {
 	double newBalance;
-	cout << "Please enter new balance:";
+	cout << "Please enter new balance to add:";
 	cin >> newBalance;
+	newBalance += readBalance();
 	return newBalance;
 }
 
@@ -84,6 +85,7 @@ int main()
 	displayBalance(balance);
 	newValue = userInput();
 	updateBalance(newValue);
+	displayBalance(readBalance());
 
 	return 0;
 }
