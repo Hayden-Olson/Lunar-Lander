@@ -61,19 +61,29 @@ void updateBalance(double newBalance)
 }
 
 /************************************************
+ * Prompt User for new Balalnce
+ ************************************************/
+
+double userInput()
+{
+	double newBalance;
+	cout << "Please enter new balance:";
+	cin >> newBalance;
+	return newBalance;
+}
+
+
+/************************************************
  * MAIN
  ************************************************/
 
 int main()
 {
 	double balance = readBalance();
-	double newBalance;
+	double newValue;
 	displayBalance(balance);
-
-	cout << "Please enter new balance:";
-	
-	cin >> newBalance;
-	updateBalance(newBalance);
+	newValue = userInput();
+	updateBalance(newValue);
 
 	return 0;
 }
