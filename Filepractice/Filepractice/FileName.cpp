@@ -14,7 +14,7 @@ using namespace std;
 double readBalance()
 {
 	ifstream inFile;
-	int balance;
+	double balance;
 	inFile.open("balance.txt");
 	if (!inFile)
 	{
@@ -30,7 +30,7 @@ double readBalance()
  * DISPLAY BALANCE 
  *****************/
 
-string displayBalance(int balance)
+string displayBalance(double balance)
 {
 	if (balance == -1)
 	{
@@ -47,7 +47,7 @@ string displayBalance(int balance)
  * UPDATE BALANCE
  ****************/
 
-void updateBalance(int newBalance)
+void updateBalance(double newBalance)
 {
 	ofstream outFile;
 	outFile.open("balance.txt");
