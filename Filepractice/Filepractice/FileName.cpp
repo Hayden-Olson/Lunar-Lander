@@ -11,7 +11,7 @@ using namespace std;
  * READ BALANCE
  **************/
 
-int readBalance()
+double readBalance()
 {
 	ifstream inFile;
 	int balance;
@@ -32,7 +32,15 @@ int readBalance()
 
 string displayBalance(int balance)
 {
-	return "";
+	if (balance == -1)
+	{
+		return "Error reading balance";
+	}
+	else
+	{
+		cout << "Your balance is: $" << balance << endl;
+		return "Balance displayed";
+	}
 }
 
 /****************
@@ -58,5 +66,7 @@ void updateBalance(int newBalance)
 
 int main()
 {
+	double balance = readBalance();
+	displayBalance(balance);
 	return 0;
 }
