@@ -3,13 +3,13 @@
 
 using namespace std;
 
-/********************************
- * Simple program to write a file
- ********************************/
+/************************************************
+ * Simple program to display and write to a file.
+ ************************************************/
 
-/**************
+/************************************************
  * READ BALANCE
- **************/
+ ************************************************/
 
 double readBalance()
 {
@@ -26,9 +26,9 @@ double readBalance()
 	return balance;
 }
 
-/*****************
+/************************************************
  * DISPLAY BALANCE 
- *****************/
+ ************************************************/
 
 string displayBalance(double balance)
 {
@@ -43,9 +43,9 @@ string displayBalance(double balance)
 	}
 }
 
-/****************
+/************************************************
  * UPDATE BALANCE
- ****************/
+ ************************************************/
 
 void updateBalance(double newBalance)
 {
@@ -60,13 +60,14 @@ void updateBalance(double newBalance)
 	outFile.close();
 }
 
-/******
+/************************************************
  * MAIN
- ******/
+ ************************************************/
 
 int main()
 {
 	double balance = readBalance();
 	displayBalance(balance);
+
 	return 0;
 }
