@@ -47,7 +47,7 @@ string displayBalance(double balance)
  * UPDATE BALANCE
  ************************************************/
 
-void updateBalance(double newBalance, double balance)
+void updateBalance(double newBalance)
 {
 	ofstream outFile;
 	outFile.open("balance.txt");
@@ -56,7 +56,7 @@ void updateBalance(double newBalance, double balance)
 		cerr << "Error opening file" << endl;
 		return;
 	}
-	outFile << balance + newBalance;
+	outFile << newBalance;
 	outFile.close();
 }
 
@@ -83,7 +83,7 @@ int main()
 	double newValue;
 	displayBalance(balance);
 	newValue = userInput();
-	updateBalance(newValue, balance);
+	updateBalance(newValue);
 
 	return 0;
 }
