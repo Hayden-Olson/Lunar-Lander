@@ -24,11 +24,11 @@ private:
 public:
 	void reset(double width, double height)
 	{
-		double x = RANDOM(0.0, width);
-		double y = RANDOM(0.0, height);
+		double x = random(0.0, width);
+		double y = random(0.0, height);
 		pos.setX(x);
 		pos.setY(y);
-		phase = RANDOM(0, 3);
+		phase = random(0, 3);
 	}
 	void draw(ogstream gout) const
 	{
