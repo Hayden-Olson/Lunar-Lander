@@ -33,5 +33,8 @@ public:
       for (int i = 0; i < 51; i++)
          gout.drawStar(pos, phase);
          phase += 1;
+		 double width = random(0.0, 800.00);
+		 double height = random(0.0, 600.00);
+		 reset(width, height);
    }
 };
