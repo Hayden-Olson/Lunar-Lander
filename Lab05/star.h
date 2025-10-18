@@ -4,13 +4,12 @@
  * Author:
  *    Br. Helfrich
  * Summary:
- *    A single star that twinkles
+ *    50 randomly placed stars that twinkle at random intervals
  ************************************************************************/
 
 #pragma once
 #include "position.h"   // for POSITION
 #include "uiDraw.h"     // for RANDOM and DRAWSTAR
-#include "random"
 
 /*****************************************************
  * STAR
@@ -32,6 +31,8 @@ public:
 	}
 	void draw(ogstream gout) const
 	{
-		gout.drawStar(pos, phase);
+		for (int i = 0; i < 51; i++)
+			gout.drawStar(pos, phase);
+			phase = (phase + 1) % 4;
 	}
 };
