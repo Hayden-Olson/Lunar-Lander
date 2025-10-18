@@ -31,7 +31,9 @@ public:
    double rotation() const
    {
        //0.1 radians per frame
-       if (clockwise)
+       if (clockwise && counterClockwise)
+           return 0.0;
+       else if(clockwise)
            return  0.1;    
        else if (counterClockwise)
            return -0.1;    
