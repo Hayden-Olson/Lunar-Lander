@@ -28,7 +28,7 @@ public:
       pos.setX(x);
       pos.setY(y);
    }
-   void draw(ogstream gout)
+   void draw(ogstream & gout)
    {
       for (int i = 0; i < 51; i++)
          gout.drawStar(pos, phase);

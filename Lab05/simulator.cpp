@@ -11,6 +11,7 @@
 #include "test.h"        // for the unit tests
 #include <cmath>         // for SQRT
 #include <cassert>       // for ASSERT
+#include "star.h" 
 using namespace std;
 
 
@@ -30,6 +31,7 @@ public:
     unsigned char phase;
     Angle a;
     Ground ground;
+    Star star;
 };
 
 /**********************************************************
@@ -40,17 +42,13 @@ void Simulator::display()
 {
     ogstream gout;
     Position posLander(200, 300);
-    Position posStar(300, 350);
-
+    
     // draw the ground
     ground.draw(gout);
+    star.draw(gout);
+    
+    
 
-    // draw the lander
-
-    gout.drawLander(posLander, a.getRadians());
-
-    // draw a star
-    gout.drawStar(posStar, phase);
 }
 
 

@@ -16,7 +16,14 @@
   ***************************************************************/
 void Lander :: reset(const Position & posUpperRight)
 {
-   status = DEAD;
+   
+    pos.setX(posUpperRight.getX() / 2.0);
+    pos.setY(posUpperRight.getY() - 10.0);
+    velocity.setDX(0.0);
+    velocity.setDY(0.0);
+    angle.setRadians(M_PI / 2.0);
+    status = PLAYING;
+    fuel = 5000.0;
 }
 
 /***************************************************************
@@ -25,6 +32,7 @@ void Lander :: reset(const Position & posUpperRight)
  ***************************************************************/
 void Lander :: draw(const Thrust & thrust, ogstream & gout) const
 {
+
 }
 
 /***************************************************************
