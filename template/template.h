@@ -65,5 +65,5 @@ public:
 
 private:
    S data[10];
-   S numElements;
+   int numElements;
 };
