@@ -18,10 +18,11 @@
  /***************************************
   * FIND BIGGEST
   **************************************/
-double findBiggest(double array[], int numElements)
+template <class B>
+double findBiggest(B array[], B numElements)
 {
    double biggest = array[0];
-   for (int i = 1; i < numElements; i++)
+   for (B i = 1; i < numElements; i++)
       if (array[i] > biggest)
          biggest = array[i];
 
@@ -33,6 +34,7 @@ class TestStack;
 /***************************************
  * STACK
  **************************************/
+template <class S>
 class Stack
 {
    friend TestStack;
@@ -40,7 +42,7 @@ public:
    Stack() : numElements(0) {}
 
    // Add an element to the stack
-   void push(const double & value)
+   void push(const S & value)
    {
       if (numElements < 10)
          data[numElements++] = value;
@@ -62,6 +64,6 @@ public:
    }
 
 private:
-   double data[10];
-   int numElements;
+   S data[10];
+   S numElements;
 };
