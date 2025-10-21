@@ -1,6 +1,6 @@
 /*************************************************************
  * 1. Name:
- *      -your name-
+ *      Hayden Olson & Mason Allen 
  * 2. Assignment Name:
  *      Practice 06: Templates
  * 3. Assignment Description:
