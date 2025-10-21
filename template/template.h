@@ -19,10 +19,10 @@
   * FIND BIGGEST
   **************************************/
 template <class B>
-double findBiggest(B array[], B numElements)
+B findBiggest(B array[], int numElements)
 {
-   double biggest = array[0];
-   for (B i = 1; i < numElements; i++)
+   B biggest = array[0];
+   for (int i = 1; i < numElements; i++)
       if (array[i] > biggest)
          biggest = array[i];
 
@@ -56,7 +56,7 @@ public:
    }
 
    // Retrieve the top-most element
-   double top()
+   S top()
    {
       if (numElements)
          return data[numElements - 1];
