@@ -17,13 +17,13 @@
 void Lander :: reset(const Position & posUpperRight)
 {
    
-    //resets to just below the top middle, i believe?
-    pos.setX(posUpperRight.getX() / 2.0);
-    pos.setY(posUpperRight.getY() - 10.0);
+    //resets to one pixel from the right side, at a variable height
+    pos.setX(399);
+    pos.setY(random(300, 380));
 
-    //stops the velocity
-    velocity.setDX(0.0);
-    velocity.setDY(0.0);
+    //randomizes the velocity within reason
+    velocity.setDX(random(-4.0, -10.0));
+    velocity.setDY(random( - 2.0, 2.0));
 
     //resets the angle
     angle.setRadians(M_PI / 2.0);
