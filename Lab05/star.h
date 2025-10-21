@@ -31,6 +31,7 @@ public:
    void draw(ogstream & gout)
    {
       for (int i = 0; i < 51; i++)
+          //needs to be an array of stars
          gout.drawStar(pos, phase);
          phase += 1;
 		 double width = random(0.0, 800.00);

@@ -47,8 +47,8 @@ void Simulator::display()
     ogstream gout;
     
     // draw the ground
-    ground.draw(gout);
     star.draw(gout);
+    ground.draw(gout);
     lander.draw(thrust ,gout);
     
 
@@ -73,13 +73,13 @@ void callBack(const Interface* pUI, void* p)
     {
         pSimulator->a.add(-0.1);
 
-    };   // rotate right here
+    }   // rotate right here
     if (pUI->isLeft())
     {
         pSimulator->a.add(0.1);
-    }
-    ;   // rotate left here
-
+    }   // rotate left here
+    
+    
 
 }
 
