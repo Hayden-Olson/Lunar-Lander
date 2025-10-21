@@ -12,6 +12,8 @@
 #include <cmath>         // for SQRT
 #include <cassert>       // for ASSERT
 #include "star.h" 
+#include "lander.h"
+#include "thrust.h"
 using namespace std;
 
 
@@ -23,7 +25,7 @@ class Simulator
 {
 public:
     // set up the simulator
-    Simulator(const Position& posUpperRight) : ground(posUpperRight) {}
+    Simulator(const Position& posUpperRight) : ground(posUpperRight), lander(posUpperRight) {}
 
     // display stuff on the screen
     void display();
@@ -32,6 +34,8 @@ public:
     Angle a;
     Ground ground;
     Star star;
+    Lander lander;
+    Thrust thrust;
 };
 
 /**********************************************************
@@ -41,12 +45,11 @@ public:
 void Simulator::display()
 {
     ogstream gout;
-    Position posLander(200, 300);
     
     // draw the ground
     ground.draw(gout);
     star.draw(gout);
-    
+    lander.draw(thrust ,gout);
     
 
 }
