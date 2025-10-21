@@ -29,9 +29,8 @@ class Lander
    
 public:
   // to create a lander, we need to know something about the board
-	Lander(const Position& posUpperRight) : status(PLAYING), fuel(5000.0)
+	Lander(const Position& posUpperRight) : pos(100,300), status(PLAYING), fuel(5000.0)
 	{
-		pos = Position(20,20);
 		velocity.setDX(0.0);
 		velocity.setDY(0.0);
 	};

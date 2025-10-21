@@ -17,11 +17,18 @@
 void Lander :: reset(const Position & posUpperRight)
 {
    
+    //resets to just below the top middle, i believe?
     pos.setX(posUpperRight.getX() / 2.0);
     pos.setY(posUpperRight.getY() - 10.0);
+
+    //stops the velocity
     velocity.setDX(0.0);
     velocity.setDY(0.0);
+
+    //resets the angle
     angle.setRadians(M_PI / 2.0);
+
+    //refuels and revives
     status = PLAYING;
     fuel = 5000.0;
 }
@@ -33,6 +40,7 @@ void Lander :: reset(const Position & posUpperRight)
 void Lander :: draw(const Thrust & thrust, ogstream & gout) const
 {
     gout.drawLander(pos, angle.getRadians());
+    gout.drawLanderFlames(pos, angle.getRadians(), thrust.isMain(), thrust.isCounter(), thrust.isClock());
 
 }
 

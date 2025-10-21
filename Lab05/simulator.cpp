@@ -46,9 +46,12 @@ void Simulator::display()
 {
     ogstream gout;
     
-    // draw the ground
+    // draws the stars behind the ground
+    //stars will need to be a for loop calling an array, once other stuff starts working.
     star.draw(gout);
     ground.draw(gout);
+
+    //lander
     lander.draw(thrust ,gout);
     
 
@@ -68,17 +71,7 @@ void callBack(const Interface* pUI, void* p)
     // draw the game
     pSimulator->display();
 
-    // handle input
-    if (pUI->isRight())
-    {
-        pSimulator->a.add(-0.1);
-
-    }   // rotate right here
-    if (pUI->isLeft())
-    {
-        pSimulator->a.add(0.1);
-    }   // rotate left here
-    
+    pSimulator->thrust.set(pUI);
     
 
 }
