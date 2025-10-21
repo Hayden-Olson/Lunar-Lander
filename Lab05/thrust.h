@@ -34,9 +34,9 @@ public:
        if (clockwise && counterClockwise)
            return 0.0;
        else if(clockwise)
-           return  0.1;    
+           return  -0.1;    
        else if (counterClockwise)
-           return -0.1;    
+           return 0.1;    
        else
            return 0.0;     
    }

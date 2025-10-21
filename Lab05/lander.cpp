@@ -22,7 +22,7 @@ void Lander :: reset(const Position & posUpperRight)
     pos.setY(random(300, 380));
 
     //randomizes the velocity within reason
-    velocity.setDX(random(-4.0, -10.0));
+    velocity.setDX(random(-10.0, -4.0));
     velocity.setDY(random( - 2.0, 2.0));
 
     //resets the angle
@@ -50,8 +50,29 @@ void Lander :: draw(const Thrust & thrust, ogstream & gout) const
  ***************************************************************/
 Acceleration Lander :: input(const Thrust& thrust, double gravity)
 {
-   pos.setX(-99.9);
-   return Acceleration();
+    Acceleration accel;
+
+    angle.add(thrust.rotation());
+
+    //gravity
+    accel.setDDY(-gravity);
+
+    if (thrust.isMain())
+    {
+        double mainThrust = thrust.mainEngineThrust(); 
+        double radians = angle.getRadians();  
+
+        //thrust X and Y 
+        double ddx = mainThrust * -sin(radians);
+        double ddy = mainThrust * cos(radians);
+
+        accel.addDDX(ddx);
+        accel.addDDY(ddy);
+    }
+
+    //fuel -= 10; might need this later
+
+    return accel;
 }
 
 /******************************************************************
@@ -60,5 +81,11 @@ Acceleration Lander :: input(const Thrust& thrust, double gravity)
  *******************************************************************/
 void Lander :: coast(Acceleration & acceleration, double time)
 {
-   pos.setX(-99.9);
+    //  v = v + a * t
+    velocity.addDX(acceleration.getDDX() * time);
+    velocity.addDY(acceleration.getDDY() * time);
+
+    //  p = p + v * t
+    pos.addX(velocity.getDX() * time);
+    pos.addY(velocity.getDY() * time);
 }
