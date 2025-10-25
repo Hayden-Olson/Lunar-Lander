@@ -10,6 +10,7 @@
 #pragma once
 #include "position.h"   // for POSITION
 #include "uiDraw.h"     // for RANDOM and DRAWSTAR
+#include <array>
 
 /*****************************************************
  * STAR
@@ -18,24 +19,35 @@
 class Star
 {
 private:
-   Position pos;
-   unsigned char phase;
+    std::array<Position, 50> starPos;
+    unsigned char phase = 0;
+
 public:
-   void reset(double width, double height)
-   {
-      double x = random(0.0, width);
-      double y = random(0.0, height);
-      pos.setX(x);
-      pos.setY(y);
-   }
-   void draw(ogstream & gout)
-   {
-      for (int i = 0; i < 51; i++)
-          //needs to be an array of stars
-         gout.drawStar(pos, phase);
-         phase += 1;
-		 double width = random(0.0, 800.00);
-		 double height = random(0.0, 600.00);
-		 reset(width, height);
-   }
+    // Constructor: automatically randomizes all star positions
+    Star(double width = 800.0, double height = 600.0)
+    {
+        reset(width, height);
+    }
+
+    // Randomize all star coordinates
+    void reset(double width, double height)
+    {
+        for (int i = 0; i < 50; i++)
+        {
+            double x = random(0.0, width);
+            double y = random(height * 0.5, height);
+            starPos[i].setX(x);
+            starPos[i].setY(y);
+        }
+    }
+
+    // Draw all stars on the screen
+    void draw(ogstream& gout)
+    {
+        for (int i = 0; i < 50; i++)
+        {
+            gout.drawStar(starPos[i], phase + i * 3);
+        }
+        phase += 4;
+    }
 };
