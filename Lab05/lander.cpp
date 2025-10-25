@@ -59,7 +59,7 @@ Acceleration Lander :: input(const Thrust& thrust, double gravity)
     //gravity
     accel.setDDY(-gravity);
 
-    if (thrust.isMain())
+    if (thrust.isMain() && fuel > 0)
     {
         double mainThrust = thrust.mainEngineThrust(); 
         double radians = angle.getRadians();  
@@ -70,9 +70,11 @@ Acceleration Lander :: input(const Thrust& thrust, double gravity)
 
         accel.addDDX(ddx);
         accel.addDDY(ddy);
+        fuel -= 10;
+        cout << fuel;
     }
 
-    //fuel -= 10; might need this later
+
 
     return accel;
 }
