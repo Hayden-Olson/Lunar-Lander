@@ -71,7 +71,6 @@ Acceleration Lander :: input(const Thrust& thrust, double gravity)
         accel.addDDX(ddx);
         accel.addDDY(ddy);
         fuel -= 10;
-        cout << fuel;
     }
 
 
