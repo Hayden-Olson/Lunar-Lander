@@ -39,8 +39,8 @@ void Lander :: reset(const Position & posUpperRight)
  ***************************************************************/
 void Lander :: draw(const Thrust & thrust, ogstream & gout) const
 {
-    gout.drawLander(pos, angle.getRadians());
-    gout.drawLanderFlames(pos, angle.getRadians(), thrust.isMain(), thrust.isCounter(), thrust.isClock());
+    gout.drawLander(pos, -angle.getRadians());
+    gout.drawLanderFlames(pos, -angle.getRadians(), thrust.isMain(), thrust.isCounter(), thrust.isClock());
 
 }
 
@@ -63,7 +63,7 @@ Acceleration Lander :: input(const Thrust& thrust, double gravity)
         double radians = angle.getRadians();  
 
         //thrust X and Y 
-        double ddx = mainThrust * -sin(radians);
+        double ddx = mainThrust * sin(radians);
         double ddy = mainThrust * cos(radians);
 
         accel.addDDX(ddx);
