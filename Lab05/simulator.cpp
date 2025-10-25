@@ -69,12 +69,15 @@ void callBack(const Interface* pUI, void* p)
     // is the first step of every single callback function in OpenGL. 
     Simulator* pSimulator = (Simulator*)p;
 
-    pSimulator->thrust.set(pUI);
-    Thrust thrust = pSimulator->thrust;
-    Acceleration accel = pSimulator->lander.input(thrust, 1.0);
+    if (pSimulator->lander.isFlying())
+    {
 
-    pSimulator->lander.coast(accel, 0.1);
+        pSimulator->thrust.set(pUI);
+        Thrust thrust = pSimulator->thrust;
+        Acceleration accel = pSimulator->lander.input(thrust, 1.0);
 
+        pSimulator->lander.coast(accel, 0.1);
+    }
     // draw the game
     pSimulator->display();
 

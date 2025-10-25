@@ -40,9 +40,9 @@ public:
   void reset(const Position& posUpperRight);
 
   // get the status of the lander
-  bool     isDead()         const { return true; }
-  bool     isLanded()       const { return true; }
-  bool     isFlying()       const { return true; }
+  bool     isDead()         const { return status == DEAD; }
+  bool     isLanded()       const { return status == SAFE; }
+  bool     isFlying()       const { return status == PLAYING; }
   Position getPosition()    const { return pos;  }
   double   getSpeed()       const { return velocity.getSpeed(); }
   int      getFuel()        const { return fuel;  }
