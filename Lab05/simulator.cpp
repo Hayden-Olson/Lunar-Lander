@@ -87,7 +87,7 @@ void callBack(const Interface* pUI, void* p)
     }
     else if (pSimulator->ground.onPlatform(pSimulator->lander.getPosition(), pSimulator->lander.getWidth()))
     {
-        if (pSimulator->lander.getSpeed() < 4)
+        if (pSimulator->lander.getSpeed() < 4 && !pSimulator->lander.isDead())
         {
             pSimulator->lander.land();
         }
