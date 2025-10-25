@@ -14,6 +14,7 @@
 #include "thrust.h"    // for THRUST
 #include "uiDraw.h"    // for DRAW* and RANDOM
 #include "angle.h"     // for ANGLE
+#include <random>
 
 enum Status { PLAYING, SAFE, DEAD };
 
@@ -29,7 +30,7 @@ class Lander
    
 public:
   // to create a lander, we need to know something about the board
-	Lander(const Position& posUpperRight) : pos(100,300), status(PLAYING), fuel(5000.0)
+	Lander(const Position& posUpperRight) : pos(399, random(300,380)), status(PLAYING), fuel(5000.0)
 	{
 		velocity.setDX(0.0);
 		velocity.setDY(0.0);
@@ -62,6 +63,8 @@ public:
   {  
 	  angle.setDegrees(0);
 	  status = SAFE;
+	  fuel = 0;
+	  velocity.set(0, 0);
   }
 
   // we are dead. Draw the lander upside down
@@ -69,6 +72,8 @@ public:
   {  
 	  angle.setDegrees(180);
 	  status = DEAD;
+	  velocity.set(0, 0);
+	  fuel = 0;
   }
 
 private:

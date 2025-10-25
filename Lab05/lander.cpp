@@ -85,7 +85,7 @@ void Lander :: coast(Acceleration & acceleration, double time)
     velocity.addDX(acceleration.getDDX() * time);
     velocity.addDY(acceleration.getDDY() * time);
 
-    //  p = p + v * t
+
     pos.addX(velocity.getDX() * time);
     pos.addY(velocity.getDY() * time);
 }

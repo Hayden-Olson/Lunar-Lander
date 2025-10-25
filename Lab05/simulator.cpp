@@ -75,9 +75,25 @@ void callBack(const Interface* pUI, void* p)
 
     pSimulator->lander.coast(accel, 0.1);
 
-
     // draw the game
     pSimulator->display();
+
+    if (pSimulator->ground.hitGround(pSimulator->lander.getPosition(), pSimulator->lander.getWidth()) && !pSimulator->ground.onPlatform(pSimulator->lander.getPosition(), pSimulator->lander.getWidth()))
+    {
+        pSimulator->lander.crash();
+    }
+    else if (pSimulator->ground.onPlatform(pSimulator->lander.getPosition(), pSimulator->lander.getWidth()))
+    {
+        if (pSimulator->lander.getSpeed() < 4)
+        {
+            pSimulator->lander.land();
+        }
+        else
+        {
+            pSimulator->lander.crash();
+        }
+    }
+    
 
   
     
