@@ -48,29 +48,32 @@ public:
 		*pCurrentAccount += amount;
 	}
 
-	int chooseSam()
+	void chooseSam()
 	{
-		return 0;
+		pCurrentAccount = &accountSam;
 	}
 
-	int chooseSue()
+	void chooseSue()
 	{
-		return 1;
+		pCurrentAccount = &accountSue;
 	}
 
-	int chooseCurrent()
+	void chooseCurrent()
 	{
-		return 0;
+		if (accountSam > accountSue)
+			pCurrentAccount = &accountSam;
+		else
+			pCurrentAccount = &accountSue;
 	}
 
 	double getSam()
 	{
-		return 0.00;
+		return accountSam;
 	}
 
 	double getSue()
 	{
-		return 0.00;
+		return accountSue;
 	}
 
 	double getCurrent()
