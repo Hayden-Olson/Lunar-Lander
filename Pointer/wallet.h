@@ -78,7 +78,7 @@ public:
 
 	double getCurrent()
 	{
-		return 0.00;
+		return *pCurrentAccount;
 	}
 };
 
